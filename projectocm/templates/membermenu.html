@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member menu</title>
+</head>
+<body>
+<table align="left" border="0">
+
+  <tr><th> <a href="/memberhome/"> Member Home </a></th></tr>
+  <tr><th> <a href="/studentarticles/"> Post articles </a></th></tr>
+    {% for x in data %}
+  <tr><th> <a href="/updatestudentprofile{{x.member_id }}/"> Update Profile </a></th></tr>
+    {% endfor %}
+  <tr><th> <a href="/memberlogout/"> Logout </a></th></tr>
+</table>
+</body>
+</html>

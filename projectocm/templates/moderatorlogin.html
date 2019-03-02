@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+</head>
+<body>
+{% include 'logo.html' %}
+{% include 'menu.html' %}
+<br> <br>
+<table align="center" border="0">
+    <tr><th> Moderator Login </th></tr>
+    <tr><th><input type="text" placeholder="USERID" name="userid" required></th></tr>
+    <tr><th><input type="password" placeholder="PASSWORD" name="password"></th></tr>
+    <tr>
+        <th colspan="2">
+            <form action="/moderatorlogin/" method="post">
+                    {% csrf_token %}
+            <button type="submit"> Login </button>
+            </form>
+        </th>
+    </tr>
+</table>
+{#<center>#}
+{#    <font color="red">#}
+{#        {% if msg %}#}
+{#            {{ msg }}#}
+{#        {% endif %}#}
+{#            </font>#}
+{#</center>#}
+</body>
+</html>
